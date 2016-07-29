@@ -35,6 +35,7 @@ public class Cat {
 		Cat Meme= new Cat("Meme");
 		// 2. Get the Cat to print it's name
 		Meme.printName();
+		Meme.meow();
 		// 3. Kill the Cat!
 		for (int i = 0; i < 9; i++) {
 			Meme.kill();
