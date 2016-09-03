@@ -4,6 +4,7 @@ import java.applet.AudioClip;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -19,7 +20,7 @@ public class drumKit extends MouseAdapter {
     JLabel drumLabelWithImage;
 
     public static void main(String[] args) throws Exception {
-   	 new DrumKit().getGoing();
+   	 new drumKit().getGoing();
     }
 
     private void getGoing() throws MalformedURLException {
@@ -29,31 +30,22 @@ public class drumKit extends MouseAdapter {
    	 man.setTitle("Law enforcement");
    	 JPanel majk= new JPanel();
      man.add(majk);
-   	 // 7. Download an image of a drum from the Internet. Drop it into your Eclipse project under "default package".
      String drum= "drum.jpg";
-   	 // 8. Put the name of your image in a String variable.
-    
-   	 // 9. Edit the next line to use your String variable
-// drumLabelWithImage = createLabelImage(drumImageString);
-   	 
-   	 // 10. Add the image to the panel
-    
-   	 // 11. Set the layout of the panel to "new GridLayout()"
-    
-   	 // 12. call the pack() method on the frame
-   	 
-   	 // 13. add a mouse listener to drumLabelWithImage.
-
+     drumLabelWithImage = createLabelImage(drum);
+    majk.add(drumLabelWithImage);
+    new GridLayout();
+   	 pack();
+   	 drumLabelWithImage.addMouseListener(this);
     }
-
-    public void mouseClicked(MouseEvent e) {
-   	 // 14. When the mouse is clicked, print "mouse clicked"
-
+    private void pack() {
+		// TODO Auto-generated method stub	
+	}
+	public void mouseClicked(MouseEvent e) {
+		System.out.println("MouseClicked");
    	 JLabel drumClicked = (JLabel) e.getSource();
-   	 // 15. Download a drum sound and drop it into your "default package". You can find it on freesound.org. To download it, log in as leagueofamazing/code4life.
-   	 // 16. If they clicked on the drumImage...
-
-   		 // 17. ...use the playSound method to play a drum sound.
+   	 if(drumClicked==drumLabelWithImage){
+   		 playSound("drumsound.wav");
+   	 }
 
    	 // 18. Add more images to make a drumkit. Remember to add a mouse listener to each one.
     }
