@@ -1,22 +1,27 @@
-public class Cat {
+public class Cat2 {
+
 
 	private String name;
 	private int lives = 9;
 
-	Cat(String name) {
+
+	Cat2(String name) {
 		this.name = name;
 	}
+
 
 	void meow() {
 		System.out.println("meeeeeooooooooooowwwwwwwww!!");
 	}
 
-	public void printName(String string) {
+
+	public void printName() {
 		if (name == null)
 			System.out.println("i don't know my own name!");
 		else
 			System.out.println("my name is " + name);
 	}
+
 
 	void kill() {
 		lives--;
@@ -28,20 +33,18 @@ public class Cat {
 			System.out.println("DEAD CAT :(");
 	}
 
-	public static void main(String[] args) {
-		/* Do the following things without changing the Cat class */
 
+	public static void main(String[] args) {
+		Cat Math= new Cat("Matthew");
 		// 1. Make the Cat meow
-		Cat Meme= new Cat("Meme");
+	
 		// 2. Get the Cat to print it's name
-		Meme.printName();
-		Meme.meow();
+		Math.printName("Matthew");
+		Math.meow();
 		// 3. Kill the Cat!
 		for (int i = 0; i < 9; i++) {
-			Meme.kill();
+			Math.kill();
 		}
-		
+
 	}
 }
-
-
