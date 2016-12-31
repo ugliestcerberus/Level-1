@@ -1,4 +1,6 @@
 /Backpack.class
+/Calculator.class
+/CalculatorTest.class
 /Cat.class
 /Cat2.class
 /ChuckleClicker.class
@@ -8,6 +10,7 @@
 /HarryPotter.class
 /Houses.class
 /Human.class
+/MathWizard.class
 /Microwave.class
 /Paper.class
 /Pencil.class
@@ -31,6 +34,6 @@
 /drum.jpg
 /drumKit.class
 /drumsound.wav
-/Calculator.class
-/CalculatorTest.class
-/MathWizard.class
+/FortuneCookie.class
+/FortuneTeller.class
+/fortuneteller.jpg
