@@ -30,7 +30,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
     static void begin() {
    	 // 3. Welcome the user. Give them a hint for the secret location.
-    String fortuneTeller= JOptionPane.showInputDialog("The secret location");
+    String fortuneTeller= JOptionPane.showInputDialog("The secret location is the crystal ball");
     }
 
     @Override
@@ -59,10 +59,28 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 // 10. Play the sound
     sound.play();
    	 // 11. Use the pause() method below to wait until your music has finished
-     pause(2000);
-    }
+     pause(2);
+    
    		 // 12. Insert your completed Magic 8 ball recipe (http://bit.ly/Zdrf6d) here
-   		 
+   
+    int random= new Random().nextInt(4);
+    System.out.println(random);
+    String random2= JOptionPane.showInputDialog("What do you want to know about the Magic 8 ball."); 
+    if(random2.equals(0)){
+    System.out.println("Yes");
+    }
+    else if(random2.equals(1)){
+    System.out.println("No");
+    }
+    else if(random2.equals(2)){
+    System.out.println("Maybe you should ask Google");
+    }
+    else{
+    	JOptionPane.showMessageDialog(null, "What happened?");
+    }
+    
+
+    }
    	 
 
     
