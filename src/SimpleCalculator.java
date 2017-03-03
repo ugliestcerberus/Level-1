@@ -20,30 +20,7 @@ public class SimpleCalculator implements ActionListener {
 		real.createUI();
 	}
 
-	public void createUI() {
-		JPanel panel = new JPanel();
-		JFrame calculator = new JFrame();
-		calculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		calculator.setVisible(true);
-		calculator.add(panel);
-		calculator.setSize(500, 500);
-		panel.add(add);
-		panel.add(sub);
-		panel.add(multi);
-		panel.add(divi);
-		panel.add(answer);
-		add.setText("addition");
-		sub.setText("subtraction");
-		multi.setText("multiplication");
-		divi.setText("division");
-		calculator.setTitle("Simple calculator");
-		panel.add(number1);
-		panel.add(number2);
-		add.addActionListener(this);
-		sub.addActionListener(this);
-		multi.addActionListener(this);
-		divi.addActionListener(this);
-	}
+	
 
 	public void actionPerformed(ActionEvent e) {
 		int num1 = Integer.parseInt(number1.getText());
