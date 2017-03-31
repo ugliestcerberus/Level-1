@@ -6,10 +6,8 @@ import java.awt.Point;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Date;
-
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
 import org.teachingextensions.logo.Paintable;
 import org.teachingextensions.logo.PenColors;
 import org.teachingextensions.logo.Tortoise;
@@ -21,6 +19,8 @@ public class TurtlePond implements KeyEventDispatcher {
 	int cookieY=10;
 	// 2. Choose the speed you want the Tortoise to go at
 	int speed=10;
+	//private Object yellow;
+	//private Object orange;
 	void setup() {
 		// 3. Edit this intro message to your own style
 		JOptionPane.showMessageDialog(null,
@@ -31,20 +31,23 @@ public class TurtlePond implements KeyEventDispatcher {
 	}
 
 	private void goUp() {
-		Tortoise.move(20);
+		Tortoise.setAngle(0);
+		Tortoise.move(speed);
 	}
 
 	private void goDown() {
-		Tortoise.move(-20);
+		Tortoise.setAngle(180);
+		Tortoise.move(speed);
 	}
 
 	private void goLeft() {
 	Tortoise.setAngle(270);
+	Tortoise.move(speed);
 	}
 
 	private void goRight() {
 		Tortoise.setAngle(90);
-
+		Tortoise.move(speed);
 	}
 
 	private void checkForFood() throws Exception {
@@ -52,18 +55,27 @@ public class TurtlePond implements KeyEventDispatcher {
 		int tortoiseLocationY = Tortoise.getY();
 
 		// 7. If the Tortoise is within 100 pixels of the food, set the background color to yellow
-
-		// 8. If the Tortoise is within 50 pixels of the food, set the background color to orange
-
-		// 9. If the Tortoise is within 20 pixels of the food, set the background color to red
-
-		// 10. If the Tortoise is within 5 pixels of the cookie, make a pop-up to tell them they found it
-
+		int xDistance= Math.abs(tortoiseLocationX-cookieX);
+		int yDistance= Math.abs(tortoiseLocationY-cookieY);
+		if(xDistance<=5||yDistance<=5){
+		JOptionPane.showMessageDialog(null, "You found the cookie");
+		}
+		else if(xDistance<=50||yDistance<=50){
+		this.setBackgroundColor(Color.ORANGE);
+		}
+		else if(xDistance<=100||yDistance<=100){
+		this.setBackgroundColor(Color.YELLOW);
+		}
 		// 11. If more than 20 seconds have elapsed, tell them the turtle died of hunger!
-
+		if(getTimeElapsed()>20){
+		JOptionPane.showMessageDialog(null, "Your turtle died");	
+		System.exit(0);
+		}
 		// 12. If the Tortoise crosses it's own path, tell them they failed and move them back to the beginning
-
-	}
+		if(wasHereBefore(yDistance, yDistance)){
+		JOptionPane.showMessageDialog(null, "You failed, sir. Try again");
+		}
+		}
 
 	private long getTimeElapsed() {
 		Date currentTime = new Date();
@@ -128,7 +140,6 @@ public class TurtlePond implements KeyEventDispatcher {
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
-
 			savePosition(Tortoise.getX(), Tortoise.getY());
 		}
 		return false;
