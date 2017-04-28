@@ -22,6 +22,7 @@ public class SpellingBee {
 		String wr= randomWord();
 		Speak(wr);
 		System.out.println(wr);
+		JOptionPane.showInputDialog("Spell the word");
 	}
 
 	public String randomWord() {
