@@ -4,7 +4,7 @@ public class Vault {
 	public static void main(String[] args) {
 		Vault v = new Vault();
 		JamesBond d= new JamesBond();
-		System.out.println(v.tryCode(code, guess));
+		System.out.println(d.findCode(v));
 	}
 
 	static int guess;

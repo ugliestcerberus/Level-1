@@ -14,6 +14,7 @@ public class CutenessTV implements ActionListener{
 	public static void main(String[] args) {
 		new CutenessTV();
 	}
+	
 	CutenessTV(){
 		frame.setVisible(true);
 		frame.setSize(500, 500);
@@ -29,22 +30,24 @@ public class CutenessTV implements ActionListener{
 		button2.addActionListener(this);
 		button3.addActionListener(this);
 		frame.pack();
-		
-		
-		
 	}
+
 	// Make a user interface with 3 buttons that will play different videos
 	// depending on which button is clicked. Use the methods below to play the
 	// cutest videos ever.
+	
 	void showDucks() {
 		playVideo("Drirjl5K9Yk");
 	}
+
 	void showFrog() {
 		playVideo("aSjCb-FfxhI");
 	}
+
 	void showFluffyUnicorns() {
 		playVideo("qRC4Vk6kisY");
 	}
+
 	void playVideo(String videoID) {
 		try {
 			URI uri = new URI("https://www.youtube.com/v/" + videoID + "?autoplay=1");
@@ -57,17 +60,7 @@ public class CutenessTV implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JButton buttonPressed = (JButton) e.getSource();
-		if(buttonPressed==button1){
-			showDucks();
-		}
-		if(buttonPressed==button2){
-			showFrog();
-		}
-		if(buttonPressed==button3){
-			showFluffyUnicorns();
-		}
+		System.out.println();
 		
-		System.out.println("las");
 	}
 }
