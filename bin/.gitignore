@@ -19,28 +19,10 @@
 /GridWorld.class
 /HarryPotter.class
 /Houses.class
-/InfraredSensorDemo.class
-/Jeopardy.class
-/Paper.class
-/Pencil.class
-/Ruler.class
-/Supply.class
-/Textbook.class
-/bkey.png
-/deletekey.png
-/drum.jpg
-/drumsound.wav
-/enterkey.jpeg
-/escapekey.png
-/fat people.jpg
-/finger prank.jpg
-/fortuneteller.jpg
-/letItBurn.mp3
-/magic.wav
-/matthewWilder.mp3
-/stereoHearts.mp3
 /Human.class
+/InfraredSensorDemo.class
 /JamesBond.class
+/Jeopardy.class
 /JukeBox.class
 /LightSensorDemo.class
 /MathWizard.class
@@ -48,6 +30,8 @@
 /MinionTest.class
 /MoveAndStopDemo.class
 /MrsMinion.class
+/Paper.class
+/Pencil.class
 /PetPlatypus.class
 /PhotoQuiz.class
 /PigLatinTranslator.class
@@ -55,6 +39,7 @@
 /Popcorn.class
 /Robot.class
 /RobotArmy.class
+/Ruler.class
 /Runner2.class
 /SeaCreatures.class
 /SeaCreatures2.class
@@ -68,14 +53,28 @@
 /SpellingBee.class
 /Spongebob.class
 /Spy.class
+/Supply.class
 /TeaParty.class
 /TeaPartyTest.class
-/TheHungerGames.class
+/Textbook.class
 /Truck.class
 /TurtlePond$1.class
 /TurtlePond.class
 /Vault.class
 /WAM2.class
 /WhackAMole.class
+/bkey.png
+/deletekey.png
+/drum.jpg
 /drumKit.class
+/drumsound.wav
+/enterkey.jpeg
+/escapekey.png
+/fat people.jpg
+/finger prank.jpg
+/fortuneteller.jpg
+/letItBurn.mp3
+/magic.wav
+/matthewWilder.mp3
+/stereoHearts.mp3
 /vaultCracker.class
