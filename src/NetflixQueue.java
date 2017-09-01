@@ -9,15 +9,36 @@
 	
 	//6. Use your NetflixQueue object to finish the sentence "the best movie is...."
 	//7. Use your NetflixQueue to finish the sentence "the second best movie is...." 
-
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class NetflixQueue {
 	
 	ArrayList<Movie> movies = new ArrayList<Movie>();
+	
+	public static void main(String[] args) {
+		Movie jashsfda = new Movie("The Martian", 9);
+		Movie goisg = new Movie("Passengers", 4);
+		Movie hasdfas = new Movie("jas", 6);
+		Movie hasdasdf = new Movie("Trolls", 5);
+		Movie hjklhklhl = new Movie("gasgds", 3);
+		NetflixQueue jas = new NetflixQueue();
+		goisg.getTicketPrice();
+		System.out.println(goisg.getTicketPrice());
+		jas.addMovie(goisg);
+		jas.addMovie(jashsfda);
+		jas.addMovie(hasdfas);
+		jas.addMovie(hasdasdf);
+		jas.addMovie(hjklhklhl);
+		jas.printMovies();
+		jas.sortMoviesByRating();
+		Movie bestmovie= jas.getMovie(0);
+		System.out.println("the best movie is" + bestmovie);
+		Movie secondmovie= jas.getMovie(2);
+		System.out.println("the second best movie is" + secondmovie);
+	}
+
+	
 	
 	public Movie getBestMovie(){
 		this.sortMoviesByRating();
