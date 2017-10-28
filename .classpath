@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="twitter4j-core-3.0.5.jar"/>
 	<classpathentry kind="lib" path="/Users/league/Google Drive/league-jars/Tortoise.jar"/>
 	<classpathentry kind="lib" path="/Users/league/Google Drive/league-jars/robot.jar"/>
+	<classpathentry kind="lib" path="JumperDemo.java"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
